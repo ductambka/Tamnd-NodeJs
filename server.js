@@ -37,17 +37,21 @@ if (dotenv.error) {
 } else {
   //load from local .env file
   console.log('local env file found')
-  NLU_APIKEY = process.env.NLU_APIKEY;
-  NLU_URL = process.env.NLU_URL;
-  CLOUDANT_API = process.env.CLOUDANT_API;
-  CLOUDANT_URL = process.env.CLOUDANT_URL;
-}
+  NLU_APIKEY = process.env.NLU_APIKEY; // mvudIU1Q1ZI8eEC3gq-34s6PkSQhDfI9A96cTC4ck0gV
+  NLU_URL = process.env.NLU_URL; //https://api.au-syd.natural-language-understanding.watson.cloud.ibm.com/instances/b411e560-bd28-4ae9-b007-b3400d5c96e3
+  CLOUDANT_API = process.env.CLOUDANT_API; //yHh9uAjIVTxBize855FBK8jXujAUfo-p8jw9oJwKvmN0
+  CLOUDANT_URL = process.env.CLOUDANT_URL; //https://38fb3533-a6dc-4394-b6c0-3670c49aa5cd-bluemix.cloudant.com/
 
+}
+NLU_APIKEY = 'mvudIU1Q1ZI8eEC3gq-34s6PkSQhDfI9A96cTC4ck0gV'
+NLU_URL = 'https://api.au-syd.natural-language-understanding.watson.cloud.ibm.com/instances/b411e560-bd28-4ae9-b007-b3400d5c96e3'
+CLOUDANT_API = 'yHh9uAjIVTxBize855FBK8jXujAUfo-p8jw9oJwKvmN0'
+CLOUDANT_URL = 'https://38fb3533-a6dc-4394-b6c0-3670c49aa5cd-bluemix.cloudant.com/'
 // logging variables for debug purposes:
-// console.log(`NLU_APIKEY: ${NLU_APIKEY}`);
-// console.log(`NLU_URL: ${NLU_URL}`);
-// console.log(`CLOUDANT_API: ${CLOUDANT_API}`);
-// console.log(`CLOUDANT_URL: ${CLOUDANT_URL}`);
+console.log(`NLU_APIKEY: ${NLU_APIKEY}`);
+console.log(`NLU_URL: ${NLU_URL}`);
+console.log(`CLOUDANT_API: ${CLOUDANT_API}`);
+console.log(`CLOUDANT_URL: ${CLOUDANT_URL}`);
 
 if (CLOUDANT_API && CLOUDANT_URL) {
   var Cloudant = require('@cloudant/cloudant');
